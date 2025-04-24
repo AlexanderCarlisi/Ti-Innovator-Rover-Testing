@@ -261,15 +261,9 @@ def rvTest_commandQueue():
     """ 
     Tests the undocumented Rover drive Command queue. 
     Very annoying when trying to continuously update motor speeds. 
-    Especially when none of the specifics for how it works are documented. 
+    Especially when none of the specifics for how it works are documented.
+    Test the how long the Queue takes VS. how long the drive command says it takes 
     """ 
-    print("Start Queue Test") 
-    rv.forward_time(1) 
-    print("Queued First Command") 
-    rv.wait_until_done() 
-    print("First Command Done") 
-
-    # Test the how long the Queue takes VS. how long the drive command says it takes 
     print("Starting Drive Command Time Test") 
     startSeconds = get_time_ms() / 1000.0 # convert to seconds 
     rv.motors("cw", 100, "ccw", 100, 0.1) # 0.1 lowest input available 
