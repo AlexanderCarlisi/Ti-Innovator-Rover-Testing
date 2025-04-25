@@ -51,7 +51,7 @@ PWM_MAX = 255
 PWM_MIN = 0 
 WHEEL_RADIUS_METERS = 0.03175 # 1.25 inches
 # TODO: Recalc GearRatio with a greater distance to be more accurate
-GEAR_RATIO = 366.2788 # Calculated using Gr = (2*pi*r*Re) / d | r = wheel radius in meters, Re = encoder ticks, d = distance traveled by the wheel in meters
+GEAR_RATIO = 366.2788 # (this also accounts for ticks per REV of the wheel) Calculated using Gr = (2*pi*r*Re) / d | r = wheel radius in meters, Re = encoder ticks, d = distance traveled by the wheel in meters
 MOTOR_DEBOUNCE_MS = 235 # Minimum amount of time to wait before updating Motors again || The number could be lower 
 WHEEL_BASE_METERS = 0.15 # Distance between the wheels in meters 
 
